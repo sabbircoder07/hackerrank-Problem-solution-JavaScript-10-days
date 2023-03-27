@@ -42,29 +42,7 @@ You will not pass this challenge if you attempt to assign the Sample Case values
 */
 
 
-'use strict';
 
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', inputStdin => {
-    inputString += inputStdin;
-});
-
-process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
-    
-    main();    
-});
-
-function readLine() {
-    return inputString[currentLine++];
-}
 
 /**
 *   The variables 'firstInteger', 'firstDecimal', and 'firstString' are declared for you -- do not modify them.
@@ -80,29 +58,25 @@ function readLine() {
 **/
 function performOperation(secondInteger, secondDecimal, secondString) {
     // Declare a variable named 'firstInteger' and initialize with integer value 4.
+    
     const firstInteger = 4;
+    //const secondInteger = 12.0
     
     // Declare a variable named 'firstDecimal' and initialize with floating-point value 4.0.
+    
     const firstDecimal = 4.0;
+    //const secondDecimal = 4.32;
     
     // Declare a variable named 'firstString' and initialize with the string "HackerRank".
+    
     const firstString = 'HackerRank ';
-    
+    //const secondString ='is the best place to learn and practice coding!';
     // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number        type) on a new line.
-    
+    console.log(Number(firstInteger) + Number(secondInteger));
     
     // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number            type) on a new line.
-    
-    
+    console.log(firstDecimal*1 + secondDecimal*1)
     // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The        variable 'firstString' must be printed first.
-    
+    console.log(firstString + secondString);
 }
 
-
-function main() {
-    const secondInteger = readLine();
-    const secondDecimal = readLine();
-    const secondString = readLine();
-    
-    performOperation(secondInteger, secondDecimal, secondString);
-}

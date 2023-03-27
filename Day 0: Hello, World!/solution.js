@@ -41,29 +41,7 @@ The value of  passed to our main function in this Sample Case was Welcome to 10 
 */
 
 
-'use strict';
 
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', inputStdin => {
-    inputString += inputStdin;
-});
-
-process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
-    
-    main();    
-});
-
-function readLine() {
-    return inputString[currentLine++];
-}
 
 /**
 *   A line of code that prints "Hello, World!" on a new line is provided in the editor. 
@@ -75,8 +53,8 @@ function readLine() {
 function greeting(parameterVariable) {
     // This line prints 'Hello, World!' to the console:
     console.log('Hello, World!');
-
     // Write a line of code that prints parameterVariable to stdout using console.log:
-    
+    console.log(parameterVariable);
 }
+
 
